@@ -8,8 +8,8 @@
 		http://www.springframework.org/schema/context
 		https://www.springframework.org/schema/beans/spring-context.xsd">
 
-	<bean id="objA" class="com.springcore.springcore.refrence.A" p:x="55" />
-	<bean id="objB" class="com.springcore.springcore.refrence.B" p:y="23" p:obj-ref="objA">
+	<bean id="objA" class="com.springcore.refrence.A" p:x="55" />
+	<bean id="objB" class="com.springcore.refrence.B" p:y="23" p:obj-ref="objA">
 		<!-- <property name="obj">
 			<ref bean="objA" />
 		</property> -->

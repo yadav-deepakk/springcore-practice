@@ -7,12 +7,18 @@
 		https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context
 		https://www.springframework.org/schema/beans/spring-context.xsd">
+		
+		
+	<bean id="AndroidCert" class="com.springcore.ci.Certificate">
+		<constructor-arg value="Android Development Certification" type="String"/>
+	</bean>
 
-	<bean id="objA" class="com.springcore.refrence.A" p:x="55" />
-	<bean id="objB" class="com.springcore.refrence.B" p:y="23" p:obj-ref="objA">
-		<!-- <property name="obj">
-			<ref bean="objA" />
-		</property> -->
+	<bean id="person1" class="com.springcore.ci.Person">
+		<constructor-arg value="123" type="int"/>
+		<constructor-arg value="Deep Shah" type="String"/>
+		<constructor-arg value="Male" type="String"/>
+		<constructor-arg value="24.5" type="float"/>
+		<constructor-arg ref="AndroidCert"/>
 	</bean>
 
 </beans>
