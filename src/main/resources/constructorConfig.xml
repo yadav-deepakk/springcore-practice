@@ -8,7 +8,11 @@
 		http://www.springframework.org/schema/context
 		https://www.springframework.org/schema/beans/spring-context.xsd">
 		
-		
+	<bean id="add" class="com.springcore.ci.Addition">
+		<constructor-arg value="21" type="int" index="1" />
+		<constructor-arg value="19" type="int" index="0" />
+	</bean>
+	
 	<bean id="AndroidCert" class="com.springcore.ci.Certificate">
 		<constructor-arg value="Android Development Certification" type="String"/>
 	</bean>
@@ -18,7 +22,14 @@
 		<constructor-arg value="Deep Shah" type="String"/>
 		<constructor-arg value="Male" type="String"/>
 		<constructor-arg value="24.5" type="float"/>
-		<constructor-arg ref="AndroidCert"/>
+		<constructor-arg ref="AndroidCert" />
+		<constructor-arg>
+			<list>
+				<value>Mumbai</value>
+				<value>Uttar Pradesh</value>
+				<value>Bihar</value>
+			</list>
+		</constructor-arg>
 	</bean>
 
 </beans>
