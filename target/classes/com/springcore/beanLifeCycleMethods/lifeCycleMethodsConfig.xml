@@ -3,23 +3,40 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
-		https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context
-		https://www.springframework.org/schema/beans/spring-context.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<bean class="com.springcore.beanLifeCycleMethods.Shop" name="shop2"
+	<!--
+	<bean class="com.springcore.beanLifeCycleMethods.ShopBean" name="shop2"
 		init-method="init" destroy-method="destroy">
 		<property name="shopName" value="Dairy Products Shop" />
 		<property name="openTime" value="7 AM" />
 		<property name="closeTime" value="10 PM" />
 	</bean>
 	
-	<bean class="com.springcore.beanLifeCycleMethods.Shop" name="shop1"
+	<bean class="com.springcore.beanLifeCycleMethods.ShopBean" name="shop1"
 		init-method="init" destroy-method="destroy">
 		<constructor-arg value="Dairy Products Shop"/>
 		<constructor-arg value="6:30 AM"/>
 		<constructor-arg value="9:00 PM"/>
+	</bean> 
+	-->
+	
+	<!--  
+	<bean id="tyotaFortuner" class="com.springcore.beanLifeCycleMethods.Car">
+		<property name="brand" value="Toyota Fortuner"/>
+		<property name="model" value="Fortuner"/>
+		<property name="price" value="5000000"/>
+		
 	</bean>
-
+	-->
+	
+	<context:annotation-config/>
+	<bean name="hercules" class="com.springcore.beanLifeCycleMethods.Bicycle">
+		<property name="brand" value="Hercules"/>
+		<property name="price" value="4300.00"/>
+	</bean>
+	
 </beans>

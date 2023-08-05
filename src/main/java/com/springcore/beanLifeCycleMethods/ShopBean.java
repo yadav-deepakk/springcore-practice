@@ -1,26 +1,27 @@
 package com.springcore.beanLifeCycleMethods;
 
-public class Shop {	
-	private String shopName; 
-	private String openTime; 
+public class ShopBean {
+	private String shopName;
+	private String openTime;
 	private String closeTime;
-	
-	public Shop() {
+
+	// Constructors
+	public ShopBean() {
 		super();
-	}	
-	
-	public Shop(String shopName) {
+	}
+	public ShopBean(String shopName) {
 		super();
 		this.shopName = shopName;
 	}
-	
-	public Shop(String shopName, String openTime, String closeTime) {
+	public ShopBean(String shopName, String openTime, String closeTime) {
 		super();
 		this.shopName = shopName;
 		this.openTime = openTime;
 		this.closeTime = closeTime;
 	}
+
 	
+	// Getters and Setters
 	public String getShopName() {
 		return shopName;
 	}
@@ -40,14 +41,17 @@ public class Shop {
 		this.closeTime = closeTime;
 	}
 	
+	
 	public void init() {
 		System.out.println("From Init method...");
-		if(this.openTime!=null) System.out.println("openTime="+ this.openTime);
-		if(this.closeTime!=null) System.out.println("closeTime="+ this.closeTime);
+		if (this.openTime != null)
+			System.out.println("openTime=" + this.openTime);
+		if (this.closeTime != null)
+			System.out.println("closeTime=" + this.closeTime);
 	}
-	
+
 	public void destroy() {
-		System.out.println(this.getClass().getName() + "'s destroy() has been called.");
+		System.out.println(this.getClass().getSimpleName() + "'s destroy() has been called.");
 	}
 
 	@Override
