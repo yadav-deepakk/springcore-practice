@@ -8,14 +8,14 @@
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
            
-    <!--  Name must be same as declared in Employee Class -->
-	<bean name="empAddress" class="com.springcore.autowiring.Address">
-		<property name="street" value="705 Street" />
-		<property name="city" value="Kandivali" />
-		<property name="pincode" value="1200001" />
+    <!--  Injection will happen byType Employee Class -->
+	<bean name="address1" class="com.springcore.autowiring.Address">
+		<property name="street" value="67 Street" />
+		<property name="city" value="Boisar" />
+		<property name="pincode" value="120101" />
 	</bean>
 	
-	<bean name="employee1" class="com.springcore.autowiring.Employee" autowire="byName">
+	<bean name="employee1" class="com.springcore.autowiring.Employee" autowire="byType">
 		<property name="empId" value="121212" />
 		<property name="empName" value="Ramesh" />
 	</bean>
