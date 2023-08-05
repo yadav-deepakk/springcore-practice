@@ -33,6 +33,7 @@
 	</bean>
 	-->
 	
+	
 	<context:annotation-config/>
 	<bean name="hercules" class="com.springcore.beanLifeCycleMethods.Bicycle">
 		<property name="brand" value="Hercules"/>
