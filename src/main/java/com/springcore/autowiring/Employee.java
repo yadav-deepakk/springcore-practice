@@ -8,19 +8,20 @@ public class Employee {
 	// Constructors
 	public Employee() {
 		super();
+		System.out.println("Employee's constructor is called.");
 	}
 	public Employee(int empId, String empName, Address empAddress) {
 		super();
 		this.empId = empId;
 		this.empName = empName;
 		this.empAddress = empAddress;
+		System.out.println("Employee's parameterised constructor is called.");
 	}
 
 	// Getters, Setters
 	public int getEmpId() {
 		return empId;
 	}
-
 	public void setEmpId(int empId) {
 		this.empId = empId;
 	}
